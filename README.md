@@ -45,19 +45,3 @@ Bower is a command line utility. Install it with npm.
 
      npm install -g bower
      bower install
-
-####Installing surge
-Installing and using surge for deployments, get more info on https://surge.sh/
-
-        npm install --global surge
-        
-after installing surge, in terminal if you wan to deploy complete folder use
-
-        surge
-
-if you wan to part of the folder to deploy for our case its build folder.
-
-    surge -p build 
-    
-Now your project folder is ready. You can commit this to your repo for others to use.
-Install bower, git & grunt-cli globally before getting project dependencies.
