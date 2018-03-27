@@ -106,47 +106,6 @@
 
 
         /*
-         * Images task
-         * Task to optimise the size of images and copy them to dist folder.
-         */
-        gulp.task('images', function() {
-            return gulp.src('src/images/**/*')
-            .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-            .pipe(gulp.dest('dist/images'));
-        });
-
-
-        /*
-         * Load Task
-         * Helper task to provide configuration for the assembler task
-         * Providing sources to assemble task
-         */
-        gulp.task('load', function(cb) {
-          app.partials('src/templates/partials/*.hbs');
-          app.layouts('src/templates/layouts/*.hbs');
-          app.pages('src/templates/pages/*.hbs');
-          app.data('src/data/*.{json,yml}');
-          cb();
-        });
-
-
-        /*
-         * Assemble Task
-         * Task to combile handlebars templates to .HTML pages
-         * Folders given in as "load" task.
-         * Deployes compiled html files to dist folder
-         */
-        gulp.task('assemble', ['load'], function() {
-          return app.toStream('pages')
-            .pipe(app.renderFile())
-            .pipe(htmlmin())
-            .pipe(extname())
-            .pipe(app.dest('dist'));
-            //.pipe(notify({ message: 'Assemble task complete' }));
-        });
-
-
-        /*
          * Browser Sync
          * Task to start server
          * Few configurations to be added
@@ -155,7 +114,7 @@
         gulp.task('browser-sync', function() {
             browserSync.init({
                 server: {
-                    baseDir: "./dist"
+                    baseDir: "./"
                 }
             });
         });
@@ -170,14 +129,8 @@
           // Watch .scss files
           gulp.watch('src/styles/**/*.scss', ['styles']);
 
-          // Watch .hbs files
-          gulp.watch('src/templates/**/*.hbs', ['assemble']);
-
           // Watch .js files
           gulp.watch('src/scripts/**/*.js', ['scripts']);
-
-          // Watch image files
-          gulp.watch('src/images/**/*', ['images']);
 
           // Create LiveReload server
           livereload.listen();
@@ -195,7 +148,7 @@
          * opens window with http://localhost:3000/ url
          */
         gulp.task('default', function (cb) {
-          gulpSequence(['styles', 'scripts', 'images'],'assemble','watch','browser-sync')(cb)
+          gulpSequence(['styles', 'scripts'],'watch','browser-sync')(cb)
         });
 
 
@@ -205,5 +158,5 @@
          * Js files as per the build config file whill get uglified, with added .min extn
          */
         gulp.task('build', function (cb) {
-          gulpSequence('styles:prod','scripts:prod','assemble')(cb)
+          gulpSequence('styles:prod','scripts:prod')(cb)
         });
