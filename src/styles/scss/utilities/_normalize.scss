@@ -1,0 +1,118 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+html, body{
+   background: $pagebg;
+   color: $text;
+   font-family: 'Source Sans Pro', Roboto, Oxygen, Ubuntu, Cantarell,sans-serif;
+   letter-spacing: 0;
+   font-weight: 400;
+   font-style: normal;
+   /* text-rendering:optimizeLegibility; */
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   -moz-font-feature-settings: "liga" on;
+   font-size: 20px;
+   line-height: 1.4;
+	-webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    min-height: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+
+h1,h2,h3,h4,h5,h6{
+   padding: 0px 0px 20px 0px;
+	font-weight: 400;
+   font-style: normal;
+   font-family: 'Slabo 27px', serif, Roboto, Oxygen, Ubuntu, Cantarell;
+   margin: 0px;
+	width: 100%;
+	color: $headcolor;
+	clear: both;
+}
+
+h1{
+   font-size: 45px;
+}
+
+h2{
+   font-size: 40px;
+}
+
+h3{
+   font-size: 35px;
+}
+
+h4{
+   font-size: 30px;
+}
+
+h5,h6{
+   font-size: 28px;
+}
+
+p{
+	font-size: 20px;
+	line-height: 28px;
+	margin: 0px;
+	padding: 0px 0px 25px 0px;
+
+}
+
+a{
+	color: $headcolor;
+	text-decoration: none;
+	border-bottom: 1px solid $headcolor;
+	&:hover{
+		border-bottom: 1px solid $line;
+	}
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+.center{
+   text-align: center;
+   display: block;
+}
+
+.gap, .dgap{
+   width: 100%;
+   display: inline-block;
+}
+
+.gap{
+	height: 140px;
+}
+
+.dgap{
+   height: 140px;
+}

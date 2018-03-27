@@ -1,0 +1,14 @@
+//importing variables files
+@import "scss/utilities/_variables.scss";
+
+//importing mixins
+@import "scss/utilities/_mixins.scss";
+
+//importing Normalize styles
+@import "scss/utilities/_normalize.scss";
+
+//importing grid system only from bootstrap
+@import "scss/utilities/_grid.scss";
+
+//importing common modules css.
+@import "scss/utilities/_common.scss";

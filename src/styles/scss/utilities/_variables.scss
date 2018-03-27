@@ -1,0 +1,35 @@
+$maxWidth				: 1920px;
+
+//Breakpoints
+$mobile-min             : 320px;
+$mobile-max             : 767px;
+
+$tab-min                : $mobile-max + 1px;
+$tab-max                : 991px;
+
+$desktop-min            :$tab-max + 1px;
+$desktop-max            :1199px;
+
+$large-min              :$desktop-max + 1px;
+$large-max              :1440px;
+
+$xlarge-min             :$maxWidth + 1px;
+
+$gutterspace            : 48px;
+$gutterhalf             : ($gutterspace/2);
+
+
+
+// Colors
+$white         : #ffffff;
+$black         : #000000;
+$gray-light    : #cccccc;
+
+$pagebg        : #fff;
+$text          : #494C4E;
+$textlight     : #886469;
+
+$headcolor     : #F5C453;
+
+$line          : #494C4E;
+$linelight     : #F0EEEE;

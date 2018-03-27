@@ -1,0 +1,54 @@
+{
+  "name": "gulpuix",
+  "version": "1.0.1",
+  "description": "gulpuix is node package for the front-end developers to build web pages with ease using gulp.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naveenkumarpg/gulpuix.git"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "JS",
+    "Gulp",
+    "Handlebars",
+    "Jquery",
+    "Assembler."
+  ],
+  "author": "Naveen Kumar PG <naveenkumarpg@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/naveenkumarpg/gulpuix/issues"
+  },
+  "homepage": "https://github.com/naveenkumarpg/gulpuix#readme",
+  "devDependencies": {
+    "assemble": "*",
+    "babel-eslint": "*",
+    "browser-sync": "*",
+    "del": "*",
+    "eslint-plugin-jasmine": "*",
+    "gulp": "*",
+    "gulp-assemble": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-cache": "*",
+    "gulp-concat": "*",
+    "gulp-cssnano": "*",
+    "gulp-eslint": "*",
+    "gulp-extname": "*",
+    "gulp-htmlmin": "*",
+    "gulp-imagemin": "*",
+    "gulp-jshint": "*",
+    "gulp-livereload": "*",
+    "gulp-notify": "*",
+    "gulp-rename": "*",
+    "gulp-ruby-sass": "*",
+    "gulp-sequence": "*",
+    "gulp-uglify": "*",
+    "jshint": "*",
+    "surge": "*"
+  }
+}
